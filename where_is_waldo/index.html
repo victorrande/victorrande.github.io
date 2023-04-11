@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waldo Landingpage</title>
+
+    <style>
+        @font-face {
+            font-family: TimesSans;
+            src: url(Times_Sans.ttf);
+        }
+
+        body{
+            background-image: url("bilder/landingpageBackground.png");
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #landing{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 1%;
+            background-color: white;
+            height: 100%;
+            width: 55%;
+            border: solid black 5px;
+        }
+
+        #topp {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        h1 {
+            font-size: 30px;
+            font-family: TimesSans;
+        }
+
+        h2 {
+            font-size: 25px;
+            font-family: TimesSans;
+        }
+
+        #hjem{
+            display: flex;
+            position: relative;
+            left: -200px;
+            
+        }
+
+        #logo > img{
+            height: 200px;
+        
+        }
+
+        #info{
+            background-color: rgb(255, 255, 255);
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            width: 90%;
+            text-align: center;
+
+        }
+
+        #topp > p {
+            margin-top: -10px;
+        }
+
+        #difficulty {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+
+        }
+
+        #startGame {
+            margin-top: 2%;
+            font-size: 40px;
+            font-family: TimesSans;
+            border: solid black 2px;
+            padding: 10px;
+            margin-bottom: 10%;
+        }
+
+        #startGame:hover{
+            cursor: pointer;
+            background-color: #00aeef;
+        }
+
+        p {
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="landing">
+        <div id="topp">
+            <div id="hjem">
+                <a href="/PROSJEKT_MARS/index.html">Hjem</a>
+            </div>
+            <div id="logo">
+            <img src="bilder/logowaldo.png" alt="">
+            </div>
+        </div>
+
+        <div id="info">
+            <div id="topp"> 
+                <h1>HVA ER "WHERE IS WALDO?"</h1>
+                <p> Spillet går ut på at man skal finne Waldo, han er gjemt et eller annet sted på kartet. Dersom du finner han, er det bare å trykke på han! Hvor mange ganger klarer du å finne ham?</p>
+            </div>
+
+            <form id="form">
+                <div class="difficulty">
+                    <h2>Vanskelighetsgrad</h2>
+                        <select onchange="difficultySelected()">
+                            <option selected>Lett</option>
+                            <option>Vanskelig</option>
+                        </select>
+                    <p>Med vanskelighetsgrad "Vanskelig", blir siktet i spillet vanskeligere. Dette må velges før du skal spille!</p>
+                </div>
+    
+            </form>
+     
+            <div id="startGame">
+               SPILL
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+
+        //Henter objetker fra DOM
+        var difficultyEls = document.querySelector(`select`)  
+        let difficultyEl = document.querySelector(`.difficulty`)
+
+        let startGameEl = document.getElementById(`startGame`)
+        startGameEl.addEventListener(`click`, startGame)
+
+        //Funksjon som setter localstorage til vanskelighetsgraden slik at vanskelighetsgradseffekten kan påføres
+        function startGame(e){
+            console.log("Start spill")
+
+            const difficultyValue = difficultyEls.value
+            localStorage.setItem(`difficulty`, difficultyValue)
+            console.log(difficultyValue)
+
+            window.location.href = "where_is_waldo.html"
+        }
+
+
+    </script>
+
+
+    <!--<script type="text/javascript" src="script.js"> </script>-->
+
+</body>
+</html>
