@@ -1,0 +1,166 @@
+
+body{
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url("bilder/jungle.png");
+
+}
+
+
+#arcade {
+    background-image: url("../indexBilder/snakeMaskin.png");
+    background-size: cover;
+    height: 100vh;
+
+}
+
+#landing{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1%;
+    width: 55vw;
+
+}
+
+#topp {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-right: auto;
+    margin-left: 10%;
+}
+
+
+
+#middle {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1 {
+    font-size: 30px;
+}
+
+h2 {
+    font-size: 25px;
+}
+
+#home {
+    margin-top: 2vh;
+}
+#home > a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 20px;
+    margin-right: 50% ;
+
+}
+
+
+
+
+#info{
+    background-color: rgba(255, 255, 255, 0.9);
+    margin-top: 25vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 90%;
+    text-align: center;
+
+}
+
+#topp > p {
+    margin-top: -10px;
+}
+
+#difficulty {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+#startGame {
+    margin-top: 2%;
+    margin-bottom: 2%;
+    font-size: 40px;
+    border: solid black 2px;
+    padding: 10px;
+    background-color: limegreen;
+}
+
+#startGame:hover{
+    cursor: pointer;
+    background-color: rgb(62, 255, 62);
+}
+
+p {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+
+
+@media(max-width: 1410px) {
+
+    #landing{
+        width: 60vw;
+
+    }
+
+}
+
+
+@media(max-width: 1250px) {
+
+    #landing{
+        
+        width: 70vw;
+
+    }
+
+}
+
+@media(max-width: 1000px) {
+
+    #landing{
+        width: 80vw;
+
+    }
+
+}
+
+
+@media(max-width: 820px) {
+
+    #landing{
+
+        width: 100vw;
+
+    }
+
+}
+
+@media(max-width: 480px) {
+    #topp {
+
+        margin-bottom: -90%;
+    }
+
+    #info {
+        margin-top: 100%;
+    }
+
+    #arcade {
+        background-size: cover;
+        height: 100vh;
+        background-image: none;
+    
+    }
+
+}

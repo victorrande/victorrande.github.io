@@ -1,0 +1,121 @@
+body{
+    margin: 0%;
+    background-color: rgb(255, 255, 255);
+    background-image: url("bilder/waldoBackground.png");  
+    background-size: cover;
+    background-position: 0px 1px;
+    width: 100%;
+
+    
+}
+
+
+
+#prikk1{
+    width: 20px;
+    height: 45px;
+    background-color: rgb(255, 25, 25);
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    top: 285px;
+    left: 20px;
+    
+    
+}
+
+
+
+#boks_hard{
+    height: 590px;
+    width: 100%;
+    background-image: url("bilder/waldoBackground.png");
+
+}
+
+
+
+.navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    align-items: center;
+    height: 135px;
+    background-color: #00aeef;
+    color: whitesmoke ;
+    text-align: center;
+
+}
+
+.home {
+    font-size: 20px;
+}
+
+.difficulty{
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+#overskrift{
+    font-size: 40px;
+}
+
+#prikk1{
+    width: 20px;
+    height: 45px;
+    background-color: rgba(255, 7, 7, 0);
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    top: 285px;
+    left: 20px;
+}
+
+#prikk2{
+    width: 20px;
+    height: 45px;
+    background-color: rgba(255, 7, 7, 0);
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    top: 115px;
+    left: -260px;
+}
+
+#prikk3{
+    width: 15px;
+    height: 30px;
+    background-color: rgb(255, 7, 7, 0);
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    top: 485px;
+    left: -337px;
+}
+
+#prikk4{
+    width: 20px;
+    height: 50px;
+    background-color: rgb(255, 7, 7, 0);
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    top: 425px;
+    left: 335px;
+}
+
+
+
+@media(max-width: 1393px){
+
+    body{
+        margin: 0%;
+        background-color: rgb(255, 255, 255);
+        background-image: url("bilder/landingpageBackground.png");  
+    
+        
+    }
+}

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andre lyttere</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        @font-face {
+            font-family: TimesSans;
+            src: url(Times_Sans.ttf);
+        }
+
+        #boks_hard::before {
+            content: '';
+                display: block;
+                width: 100%;
+                height: 100%;
+                position: fixed;
+                pointer-events: none;
+                background: radial-gradient(
+                    circle 10vmax at var(--cursorX) var(--cursorY),
+                    rgba(0,0,0,0) 0%,
+                    rgba(0,0,0,.80) 80%,
+                    rgba(0,0,0,.95) 100%);
+           
+        }
+
+        #overskrift > img {
+            display: flex;
+            height: 135px;
+
+        }
+
+        .waldo {
+            background-image: url("bilder/1.jpg");
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+            margin-top: 0%;
+            width: 100%;
+            height: 600px;
+            display: flex;
+            flex-direction: column;
+            align-items: center; 
+
+        }
+
+
+        #boks{
+            display: flex;
+            background-size: cover;
+            height: 600px;
+            width: 100vw;
+
+        }
+
+        #prikk5{
+            width: 20px;
+            height: 20px;
+            background-color: rgba(255, 7, 7, 0);
+            overflow: hidden;
+            white-space: nowrap;
+            position: relative;
+            top: 495px;
+            left: -310px;
+    
+        }
+        #prikk6{
+            width: 20px;
+            height: 20px;
+            background-color: rgba(255, 7, 7,0);
+            overflow: hidden;
+            white-space: nowrap;
+            position: relative;
+            top: 420px;
+            left: -230px;
+        }
+        #prikk7{
+            width: 20px;
+            height: 45px;
+            background-color: rgb(255, 7, 7);
+            overflow: hidden;
+            white-space: nowrap;
+            position: relative;
+            top: 115px;
+            left: -260px;
+        }
+        #prikk8{
+            width: 40px;
+            height: 90px;
+            background-color: rgba(255, 7, 7, 0);
+            overflow: hidden;
+            white-space: nowrap;
+            position: relative;
+            top: 300px;
+            left: 160px;
+        }
+
+        #difficulty {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            font-family: timesSans;
+            font-size: 20px;
+            width: 60px;
+            height: 50px;
+            border: solid rgba(0, 0, 0, 0.471);
+            background-color: green;
+        }
+
+        #difficulty_hard {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            font-family: timesSans;
+            font-size: 20px;
+            width: 85px;
+            height: 50px;
+            border: solid black;
+            background-color: rgb(202, 7, 27);
+        }
+
+        .home > a{
+            font-family: TimesSans;
+            color: antiquewhite;
+            text-decoration: none;
+            font-size: 20px;
+        }
+
+        .newGame {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            top: 50px;
+            left: 0px;
+        }
+
+        .newGame > p {
+            color: #ffffff;
+            font-size: 50px;
+            font-family: timesSans;
+        }
+
+        .newGame > input{
+            margin-top: -20px;
+            color: #ffffff;
+            background-color: #00aeef;
+            border: #008ec2;
+            padding: 10px 20px;
+            font-family: timesSans;
+            font-size: 20px;
+
+        }
+
+        .newGame > input:hover {
+            cursor: pointer;
+            background-color: #00aeef;
+
+        }
+
+        #funnetWaldo{
+            display: flex;
+            margin-top: -25px;
+            height: 600px;
+
+        }
+
+        #waldoFunnet {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow: hidden;
+            white-space: nowrap;
+            position: relative;
+            opacity: 100%;
+            width: 100vw;
+            background-color: rgba(0, 0, 0, 0.518);
+
+        }
+
+        #waldoFunnet > img {
+            height: 610px;
+        }
+
+    </style>
+</head>
+<body>
+
+     <div class="navbar" id="navbar">
+        <nav  class="home">
+            <a href="waldo_landing.html">TILBAKE</a>
+        </nav>
+        <nav id="overskrift">
+            <img src="bilder/logowaldo.png" alt="">
+        </nav>
+        <nav id="difficulty">
+            Lett
+        </nav>
+    </div>
+    
+    <div id="boks">
+        <div class="waldo">
+            <div id="prikk1" class="prikk">  
+            </div>
+        </div>
+        
+    </div>
+    
+
+    <script>
+        let difficultyEl = document.querySelector(`#difficulty`)
+
+        const difficultyValue = localStorage.getItem(`difficulty`);
+        console.log(difficultyValue)
+
+        //if test for å sjekke hvilken vanskelighetsgrad brukeren har valgt
+        if(difficultyValue === "Lett"){
+                console.log("Vanskelighetsgrad:  Lett")
+                document.getElementById("boks_hard").setAttribute("id","boks") //endrer id fra boks_hard -> boks
+
+                }
+
+                else if(difficultyValue === "Vanskelig"){
+                console.log("Vanskelighetsgrad: Vanskelig")
+                document.getElementById("boks").setAttribute("id","boks_hard") //endrer id til boks -> boks_hard
+                document.getElementById("difficulty").setAttribute("id","difficulty_hard") //endrer id til difficulty -> difficulty_hard
+ 
+                difficultyEl.innerHTML = `Vanskelig`
+
+            }
+    </script>
+
+    <script type="text/javascript" src="script.js"> </script>
+    
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport", content="width=device-width, initial-scale=1.0">
+        <title>Snake</title>
+
+        <link rel="stylesheet" href="snake.css">
+        <!-- Importerer fra fontawesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+
+    </head>
+
+    <body>
+
+        <div class="navbar" id="navbar">
+            <nav id="home">
+                <a href="../index.html"><i class="fa-sharp fa-solid fa-house"></i></a>
+            </nav>
+            <nav id="navSnake">
+                <h1>Snake</h1>
+            </nav>
+            
+            <nav id="settings">
+                Innstillinger
+            </nav>
+        </div>
+        <div id="parent">
+            <div id="score">
+                Score: 0
+                <img id="fruit" src="bilder/cookie1.png" alt="">
+            </div>
+
+            <div id="difficulty">
+            </div>
+            
+            <div id="highScore">
+                High Score:
+            </div>
+            
+        </div>
+
+        <div class="parentSettingsOff">
+            <div id="parentSettingTop">
+                <div id="settingsHeader">
+                    Innstillinger
+                </div>
+
+                <div id="close">
+                    Lukk
+                </div>
+            </div>
+            <div id="settingsChoose">
+                
+                <div class="difficulty" id="easy" data-value="1">
+                    LETT
+                </div>
+                <div class="difficulty" id="medium" data-value="2">
+                    MIDDELS
+                </div>
+                <div class="difficulty" id="hard" data-value="3">
+                    VANSKELIG
+                </div>
+                <div class="difficulty" id="i_hard" data-value="4">
+                    EKSTRA VANSKELIG
+                </div>
+            </div>
+        </div>
+
+     
+      
+        <canvas id="board" style="border:3px solid black;" ></canvas>
+
+        <div id="controller">
+            <div id="controllerTop">
+                <button id="controllerUp"> 
+                    <i class="fa-solid fa-arrow-up"></i>
+                </button>
+            </div>
+            <div id="controllerBottom">
+                <button id="controllerLeft" >
+                    <i class="fa-solid fa-arrow-left"></i>
+                </button>
+                <button id="controllerDown"> 
+                    <i class="fa-solid fa-arrow-down"></i>
+                </button>
+                <button id="controllerRight">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </div>
+            
+        </div>
+        
+        <script src="snake.js"></script>
+
+    </body>
+</html>

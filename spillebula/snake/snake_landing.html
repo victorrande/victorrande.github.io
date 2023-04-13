@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waldo Landingpage</title>
+
+    <link rel="stylesheet" href="snake_landing.css">
+    <!-- Importerer fra fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+
+</head>
+<body>
+    <div id="arcade">
+
+        <div id="landing">
+            <div id="topp">
+                <div id="home">
+                    <a href="../index.html"> <i class="fa-sharp fa-solid fa-house"></i> </a>
+                </div>
+            </div>
+    
+            <div id="info">
+                <div id="middle"> 
+                    <h1>HVA ER SNAKE?</h1>
+                    <p> Spillet går ut på at man skal styre slangen til å spise kjeksen. Slangens lengde øker for hver kjeks den spiser. Etterhvert når man spiser flere kjekser, vil farten på slangen øke og spillet bli vanskeligere.</p>
+                </div>
+    
+                <div id="howToPlay">
+                    <h2>Hvordan spiller man?</h2>
+                    <p>For å starte spillet trykker man på enten WASD, piltastene på tastaturet eller på kontrolleren under spillet.</p>
+                </div>
+         
+                <div id="startGame">
+                   SPILL
+                </div>
+    
+            </div>
+        </div>
+
+
+
+
+
+    </div>
+
+
+
+    <script>
+
+        //Henter objetker fra DOM
+        var difficultyEls = document.querySelector(`select`)  
+        let difficultyEl = document.querySelector(`.difficulty`)
+
+        let startGameEl = document.getElementById(`startGame`)
+        startGameEl.addEventListener(`click`, startGame)
+
+        //Funksjon som setter localstorage til vanskelighetsgraden slik at vanskelighetsgradseffekten kan påføres
+        function startGame(e){
+         window.location.href = "snake.html"
+        }
+
+
+    </script>
+
+
+    <!--<script type="text/javascript" src="script.js"> </script>-->
+
+</body>
+</html>
